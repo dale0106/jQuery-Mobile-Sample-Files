@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sample App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- my css from the theme i created -->
+    <link rel="stylesheet" href="themes/AnB.min.css" />
+    
+    <!-- css for icons -->
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    
+    <!-- jqm structure css -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
+    
+    <!-- jquery files -->
+   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+   <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+</head>
+
+<body>
+    
+    <div data-role="page" id="home">
+      <div data-role="header">
+        <h1>Header</h1>
+      </div>
+      <div data-role="content">
+      	<p>The home page.</p>
+        <p>This mobile site is INTENTIONALLY ugly.</p>
+        <a href="#listview" data-role="button" data-theme="a" data-icon="info" data-iconpos="left">Listview Page</a>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <h4>Footer</h4>
+      </div>
+    </div>
+    
+    <div data-role="page" id="listview"  data-theme="a">
+      <div data-role="header">
+      	<a href="#" data-rel="back" data-icon="back">Back</a>
+        <h1>Header - theme a</h1>
+      </div>
+      <div data-role="content">
+        <ul data-role="listview" data-split-icon="gear" data-theme="a">
+          <li><a href="#">Some Page on split view<span class="ui-li-count ui-body-inherit">10</span></a><a href="#">Default</a></li>
+          <li><a href="#">Other Page  on split view<span class="ui-li-count">21</span></a><a href="#">Default</a></li>
+          <li><a href="#">A Page  on split view<span class="ui-li-count">45</span></a><a href="#">Default</a></li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul data-role="listview" data-icon="arrow-r" data-theme="a">
+          <li>
+            <a href="#navbar">Nav Bar with theme a</a>
+          <li>
+           <a href="#layoutgrid">Layout Grid with theme b</a>
+          <li>
+            <a href="#collapsibleblock">Collapsible Block with theme b</a>
+        </ul>
+        <p>&nbsp;</p>
+      
+        <ul data-role="listview" data-icon="arrow-r" data-filter="true" data-theme="a">
+          <li>
+            <a href="#navbar">Nav Bar</a>
+          <li>
+           <a href="#layoutgrid">Layout Grid</a>
+          <li>
+            <a href="#collapsibleblock">Collapsible Block</a>
+        </ul>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <h4>Footer</h4>
+      </div>
+    </div>
+    
+    <div data-role="page" id="navbar" data-theme="b">
+      <div data-role="header">
+      	<a href="#" data-rel="back" data-icon="back">Back</a>
+        <h1>Header - theme b</h1>
+        <div data-role="navbar"  data-iconpos="right">
+        	<ul>
+            	<li><a href="#home" data-icon="home" >Home</a></li>
+            	<li><a href="#listview" data-icon="bullets" >Listview</a></li>
+            	<li><a href="#layoutgrid" data-icon="grid" >Grid</a></li>
+            </ul>
+        </div>
+      </div>
+      <div data-role="content">
+      	<p>Navbar is inside the header</p>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <h4>Footer</h4>
+      </div>
+    </div>
+    
+    <div data-role="page" id="layoutgrid" data-theme="b">
+      <div data-role="header">
+      	<a href="#" data-rel="back" data-icon="back">Back</a>
+        <h1>Header - theme b</h1>
+      </div>
+      <div data-role="content">
+        <div class="ui-grid-b">
+          <div class="ui-block-a">Block 1,1</div>
+          <div class="ui-block-b">Block 1,2</div>
+          <div class="ui-block-c">Block 1,3</div>
+          <div class="ui-block-a">Block 2,1</div>
+          <div class="ui-block-b">Block 2,2</div>
+          <div class="ui-block-c">Block 2,3</div>
+        </div>
+      	<p>&nbsp;</p>
+        <div class="ui-grid-b">
+          <div class="ui-block-a"><div class="ui-bar ui-bar-c">Block 1,1</div></div>
+          <div class="ui-block-b"><div class="ui-bar ui-bar-c">Block 1,2</div></div>
+          <div class="ui-block-c"><div class="ui-bar ui-bar-c">Block 1,3</div></div>
+          <div class="ui-block-a"><div class="ui-bar ui-bar-c">Block 2,1</div></div>
+          <div class="ui-block-b"><div class="ui-bar ui-bar-c">Block 2,2</div></div>
+          <div class="ui-block-c"><div class="ui-bar ui-bar-c">Block 2,3</div></div>
+        </div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <h4>Footer</h4>
+      </div>
+    </div>
+    
+    <div data-role="page" id="collapsibleblock" data-theme="b">
+      <div data-role="header">
+      	<a href="#" data-rel="back" data-icon="back">Back</a>
+        <h1>Header</h1>
+      </div>
+      <div data-role="content">
+      	
+        <div data-role="collapsible-set">
+        	<div data-role="collapsible" data-collapsed="false">
+            	<h3>Item one</h3>
+                <p>Blah Blah Blah</p>
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+            	<h3>Item two</h3>
+                <p>Blah Blah Blah</p>
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+            	<h3>Item three</h3>
+                <p>Blah Blah Blah</p>
+            </div>
+        </div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <h4>Footer</h4>
+      </div>
+    </div>
+</body>
+</html>
